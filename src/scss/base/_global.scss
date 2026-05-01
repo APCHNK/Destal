@@ -64,11 +64,15 @@ main {
 
     // Dark navy cards inside a light section keep their own white-on-dark text.
     // Higher specificity than the bare `.light-bg span` rule so cards win.
+    // Buttons are excluded so .button--primary/--outline keep their own colours.
     .player-wrap,
     .songs-section,
     .contact,
     .card-dark {
-        &, h1, h2, h3, h4, h5, h6, p, span, li, a {
+        &,
+        h1, h2, h3, h4, h5, h6,
+        p, span, li,
+        a:not(.button) {
             color: $color-white;
         }
     }
