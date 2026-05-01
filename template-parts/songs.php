@@ -19,16 +19,14 @@ if (!$cards || !is_array($cards) || count($cards) === 0) return;
         <?php if ($image) : ?>
           <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($title); ?>" loading="lazy">
         <?php endif; ?>
-        <?php if ($title || $desc) : ?>
-          <div class="songs-card__overlay">
-            <?php if ($title) : ?>
-              <h3><?php echo esc_html($title); ?></h3>
-            <?php endif; ?>
-            <?php if ($desc) : ?>
-              <p><?php echo wp_kses_post($desc); ?></p>
-            <?php endif; ?>
-          </div>
-        <?php endif; ?>
+        <div class="songs-card__overlay">
+          <?php if ($title) : ?>
+            <h3><?php echo esc_html($title); ?></h3>
+          <?php endif; ?>
+          <?php if ($desc) : ?>
+            <p><?php echo wp_kses_post($desc); ?></p>
+          <?php endif; ?>
+        </div>
       </a>
     <?php endforeach; ?>
   </div>
