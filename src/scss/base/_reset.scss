@@ -9,12 +9,13 @@
 
 html,
 body {
-  background: $color-dark;
+  background: $color-bg;
 }
 
 body {
   word-break: break-word;
-  color: $color-white;
+  color: $color-text;
+  font-family: $font-sans;
 }
 
 :focus,

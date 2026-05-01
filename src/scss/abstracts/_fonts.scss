@@ -1,4 +1,9 @@
-// Manrope and Playfair Display are loaded via Google Fonts in header.php
+// Inclusive Sans, Instrument Sans, and Manrope are loaded via Google Fonts in header.php
+// Inclusive Sans is the primary font (headings + body), per Figma 5G Golden Copy.
 
-$font-sans: 'Manrope', sans-serif;
-$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inclusive Sans', sans-serif;
+$font-secondary: 'Manrope', sans-serif;
+$font-meta: 'Instrument Sans', sans-serif;
+
+// Legacy alias kept for partials still referencing $font-serif.
+$font-serif: $font-sans;

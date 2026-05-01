@@ -3,30 +3,28 @@
   flex-direction: column;
   gap: 20px;
   padding: 30px 0;
+  color: $color-text;
 
   @include media-tablet {
-    gap: 40px;
+    gap: 32px;
   }
 
   @include media-laptop {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
-  @include media-laptop-l {
-    gap: 60px;
+  > h2 {
+    color: $color-text;
+    font-weight: 600;
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 
     @include media-tablet {
-      gap: 22px;
-    }
-
-    @include media-laptop-l {
-      padding: 0 109px;
+      gap: 24px;
     }
 
     li {
@@ -43,10 +41,12 @@
         height: 91px;
         object-fit: cover;
         width: 91px;
+        border-radius: 12px;
 
         @include media-tablet {
           height: 140px;
           width: 140px;
+          border-radius: 16px;
         }
       }
 
@@ -55,7 +55,7 @@
         flex-direction: column;
         flex-grow: 1;
         font-family: $font-sans;
-        gap: 16px;
+        gap: 12px;
 
         @include media-tablet {
           align-items: center;
@@ -77,21 +77,24 @@
 
         h3 {
           font-family: $font-sans;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 1.2;
+          color: $color-text;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 24px;
 
           @include media-tablet {
             font-size: 32px;
-            line-height: 44px;
+            line-height: 40px;
           }
         }
 
         span {
           display: block;
+          font-family: $font-meta;
+          color: $color-text;
           font-size: 14px;
-          font-weight: 600;
-          line-height: 1.4;
+          font-weight: 400;
+          line-height: 20px;
 
           @include media-tablet {
             font-size: 16px;
@@ -108,7 +111,7 @@
       }
     }
     hr {
-      background: rgba(255, 255, 255, 0.20);
+      background: $color-divider;
       border: 0;
       height: 1px;
       margin: 0;

@@ -1,13 +1,13 @@
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-serif;
+    font-family: $font-sans;
 }
 
 .app-wrapper {
-    background: $color-dark;
+    background: $color-bg;
 }
 
 main {
-    background: $color-dark;
+    background: $color-bg;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -51,34 +51,44 @@ main {
   }
 }
 
-.light-bg {
-    background: $color-dark;
-    color: $color-white;
-}
-
-.banner-bg {
-    background: $color-dark;
-    color: $color-white;
-}
-
-.white-bg {
-    background: $color-dark;
-    color: $color-white;
-}
-
-// Dark sections: invert text colors for headings and body copy
+// Light sections (default page surfaces) — black headings on light bg, per Figma
 .light-bg,
-.white-bg,
+.white-bg {
+    background: $color-bg;
+    color: $color-text;
+
+    h1, h2, h3, h4, h5, h6,
+    p, span, li {
+        color: $color-text;
+    }
+}
+
+// Banner-bg keeps its own black hero treatment
 .banner-bg {
+    background: $color-dark;
+    color: $color-white;
+
     h1, h2, h3, h4, h5, h6,
     p, span, li {
         color: $color-white;
     }
 }
 
-// Footer keeps the dark theme (Yann Destal design)
+// Reusable dark card surface (player, golden hits, contact, etc.)
+.card-dark {
+    background: $color-card;
+    color: $color-white;
+    border-radius: $border-radius-s;
+
+    h1, h2, h3, h4, h5, h6,
+    p, span, li {
+        color: $color-white;
+    }
+}
+
+// Footer is its own dark navy strip
 footer.light-bg {
-    background: $color-dark;
+    background: $color-card;
     color: $color-white;
 
     h1, h2, h3, h4, h5, h6,

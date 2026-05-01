@@ -15,12 +15,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
+  padding: 10px 20px;
   font-family: $font-sans;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  color: $color-white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $color-text;
   background: transparent;
   border: 1px solid transparent;
   border-radius: $border-radius-btn;
@@ -28,12 +28,12 @@
   transition: background 0.25s ease, color 0.25s ease;
 
   @include media-tablet {
-    font-size: 16px;
-    padding: 12px 22px;
+    font-size: 20px;
+    padding: 10px 22px;
   }
 
   &:hover {
-    color: $color-primary;
+    color: $color-primary-hover;
   }
 
   &.is-active,

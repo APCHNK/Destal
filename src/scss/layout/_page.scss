@@ -1,6 +1,6 @@
 .page {
-  background-color: $color-dark;
-  color: $color-white;
+  background-color: $color-bg;
+  color: $color-text;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -18,12 +18,12 @@
 
   h1, h2, h3, h4, h5, h6,
   p, span, li {
-    color: $color-white;
+    color: $color-text;
   }
 
   h1 {
-    font-family: $font-serif;
-    font-weight: 700;
+    font-family: $font-sans;
+    font-weight: 600;
     font-size: 32px;
     line-height: 1.1;
 
