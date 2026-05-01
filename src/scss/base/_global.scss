@@ -101,14 +101,14 @@ main {
     }
 }
 
-// Footer is its own dark navy strip
+// Footer keeps the Adolfo-style light-pink strip with dark text on top.
 footer.light-bg {
-    background: $color-card;
-    color: $color-white;
+    background: #FFF0F0;
+    color: $color-text;
 
     h1, h2, h3, h4, h5, h6,
     p, span, a, li {
-        color: $color-white;
+        color: $color-text;
     }
 }
 
