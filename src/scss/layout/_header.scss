@@ -193,11 +193,14 @@ header {
         // Desktop submenu styles
         &.has-submenu {
           position: relative;
-          &.current{
-            .submenu-indicator{
-              color: $color-dark;
-            }
+
+          // Chevron always follows the parent <a> text colour:
+          //   default <a>  → white  → white chevron
+          //   hover/current → black on yellow pill → black chevron
+          .submenu-indicator {
+            color: inherit;
           }
+
           @include media-laptop {
             > a {
               display: inline-flex;
@@ -212,10 +215,15 @@ header {
                             color 0.2s ease;
                 opacity: 0.7;
               }
+            }
 
-              &:hover .submenu-indicator {
-                color: $color-dark;
-              }
+            // Keep the parent pill hovered (yellow bg + black text +
+            // black chevron) while the dropdown stays open. Without
+            // this the cursor moving to a dropdown item drops <a>:hover
+            // and the chevron flips back to white on a yellow pill.
+            &:hover > a {
+              background: $color-primary;
+              color: $color-dark;
             }
 
             &:hover {
