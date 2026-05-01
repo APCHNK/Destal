@@ -1,15 +1,30 @@
+// Discography / Golden Hits — dark navy panel per Figma mockup,
+// album tiles stretch the full container width.
 .songs-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: 24px;
+  background: $color-card;
+  border-radius: $border-radius-s;
+  padding: 32px 16px;
+  color: $color-white;
 
   @include media-tablet {
-    gap: 30px;
+    gap: 32px;
+    padding: 48px 24px;
   }
 
-  h2 {
+  @include media-laptop-l {
+    gap: 40px;
+    padding: 56px 32px;
+  }
+
+  > h2 {
     text-align: center;
+    color: $color-white;
+    font-family: $font-sans;
+    font-weight: 600;
   }
 }
 
@@ -33,14 +48,11 @@
 .songs-card {
   display: block;
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 1;
   cursor: pointer;
-
-  @include media-tablet {
-    border-radius: 20px;
-  }
+  width: 100%;
 
   img {
     width: 100%;
@@ -53,7 +65,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background: rgba($color-card, 0);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -100,7 +112,7 @@
     }
 
     .songs-card__overlay {
-      background: rgba($color-card, 0.55);
+      background: rgba(0, 0, 0, 0.55);
 
       h3,
       p {

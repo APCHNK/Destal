@@ -66,6 +66,7 @@ main {
     // Higher specificity than the bare `.light-bg span` rule so cards win.
     // Buttons are excluded so .button--primary/--outline keep their own colours.
     .player-wrap,
+    .songs-section,
     .contact,
     .card-dark {
         &,
