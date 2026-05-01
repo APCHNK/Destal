@@ -1,0 +1,101 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-serif;
+}
+
+.app-wrapper {
+    background: $color-dark;
+}
+
+main {
+    background: $color-dark;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media-tablet {
+        gap: 60px;
+    }
+
+    @include media-laptop {
+        gap: 80px;
+    }
+}
+
+// Load animations (play on page load, not scroll)
+@keyframes loadFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.load-fadeInUp {
+  @include media-laptop {
+    animation: loadFadeInUp 0.8s ease both;
+  }
+}
+
+.load-delay-1 {
+  @include media-laptop {
+    animation-delay: 0.2s;
+  }
+}
+
+.load-delay-2 {
+  @include media-laptop {
+    animation-delay: 0.4s;
+  }
+}
+
+.light-bg {
+    background: $color-dark;
+    color: $color-white;
+}
+
+.banner-bg {
+    background: $color-dark;
+    color: $color-white;
+}
+
+.white-bg {
+    background: $color-dark;
+    color: $color-white;
+}
+
+// Dark sections: invert text colors for headings and body copy
+.light-bg,
+.white-bg,
+.banner-bg {
+    h1, h2, h3, h4, h5, h6,
+    p, span, li {
+        color: $color-white;
+    }
+}
+
+// Footer keeps the dark theme (Yann Destal design)
+footer.light-bg {
+    background: $color-dark;
+    color: $color-white;
+
+    h1, h2, h3, h4, h5, h6,
+    p, span, a, li {
+        color: $color-white;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    @include media-laptop {
+        overflow: auto;
+        position: static;
+        height: auto;
+    }
+}

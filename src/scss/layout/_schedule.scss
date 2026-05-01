@@ -1,0 +1,117 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+
+  @include media-tablet {
+    gap: 40px;
+  }
+
+  @include media-laptop {
+    padding: 80px 0;
+  }
+
+  @include media-laptop-l {
+    gap: 60px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include media-tablet {
+      gap: 22px;
+    }
+
+    @include media-laptop-l {
+      padding: 0 109px;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      gap: 16px;
+
+      @include media-tablet {
+        gap: 24px;
+      }
+
+      img {
+        flex-shrink: 0;
+        height: 91px;
+        object-fit: cover;
+        width: 91px;
+
+        @include media-tablet {
+          height: 140px;
+          width: 140px;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        font-family: $font-sans;
+        gap: 16px;
+
+        @include media-tablet {
+          align-items: center;
+          flex-direction: row;
+          gap: 24px;
+          justify-content: space-between;
+          width: calc(100% - 164px);
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          @include media-tablet {
+            gap: 10px;
+          }
+        }
+
+        h3 {
+          font-family: $font-sans;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.2;
+
+          @include media-tablet {
+            font-size: 32px;
+            line-height: 44px;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.4;
+
+          @include media-tablet {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+
+        button {
+          width: fit-content;
+          padding: 12px 22px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    hr {
+      background: rgba(255, 255, 255, 0.20);
+      border: 0;
+      height: 1px;
+      margin: 0;
+    }
+  }
+}

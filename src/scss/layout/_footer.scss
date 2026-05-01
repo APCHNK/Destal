@@ -1,0 +1,35 @@
+.footer-wrap {
+  align-items: center;
+  border-top: 1px solid $color-divider;
+  color: $color-white;
+  display: flex;
+  gap: 16px;
+  flex-direction: column-reverse;
+  font-family: $font-sans;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 28px 0;
+  width: 100%;
+
+  @include media-tablet {
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 36px 0;
+  }
+
+  span {
+    color: inherit;
+    display: block;
+    text-align: center;
+  }
+
+  a {
+    color: inherit;
+    transition: .3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

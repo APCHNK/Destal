@@ -1,0 +1,112 @@
+.text-block {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-serif;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+
+  @include media-tablet {
+    gap: 30px;
+  }
+
+  @include media-laptop-l {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .headline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include media-laptop-l {
+        width: 390px;
+    }
+
+    span {
+      font-family: $font-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+      @include media-laptop-l {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include media-tablet {
+        gap: 20px;
+    }
+
+    @include media-laptop-l {
+        gap: 25px;
+        width: 737px;
+    }
+
+    p {
+      font-family: $font-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include media-tablet {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    img {
+      border-radius: 20px;
+      height: auto;
+      width: 100%;
+
+      @include media-tablet {
+        border-radius: 32px;
+      }
+    }
+  }
+}
+
+// Description text slider (Swiper)
+.description-slider {
+  font-family: $font-serif;
+
+  @include media-laptop-l {
+    width: 737px;
+  }
+
+  .swiper-slide {
+    p {
+      font-family: $font-sans;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include media-tablet {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    img {
+      border-radius: 20px;
+      height: auto;
+      width: 100%;
+
+      @include media-tablet {
+        border-radius: 32px;
+      }
+    }
+  }
+}
