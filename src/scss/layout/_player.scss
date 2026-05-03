@@ -26,6 +26,12 @@
   padding: 24px 16px 14px;
   color: $color-white;
 
+  // On internal pages the player sits on the dark page gradient, so the card
+  // uses a translucent white surface (per Figma 5G Golden Copy node 793:780).
+  .app-wrapper:has(.page-spacing) & {
+    background-color: rgba($color-white, 0.19);
+  }
+
   @include media-tablet {
     padding: 40px;
   }

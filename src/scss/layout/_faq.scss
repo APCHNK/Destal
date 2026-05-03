@@ -119,3 +119,47 @@
     }
   }
 }
+
+// Dark internal-page variant — per Figma 5G Golden Copy node 793:754.
+// White text on the page gradient, white-with-alpha dividers, 28px title,
+// Regular item weight, recoloured arrow.
+.app-wrapper:has(.page-spacing) .faq {
+  color: $color-white;
+
+  > h2 {
+    color: $color-white;
+    font-family: $font-sans;
+    font-weight: 600;
+    font-size: 22px;
+
+    @include media-tablet {
+      font-size: 28px;
+    }
+  }
+
+  .faq__item {
+    border-bottom-color: rgba($color-white, 0.3);
+
+    &:first-child {
+      border-top-color: rgba($color-white, 0.3);
+    }
+  }
+
+  .faq__question span {
+    color: $color-white;
+    font-weight: 400;
+  }
+
+  .faq__item.active .faq__question span {
+    color: $color-primary;
+  }
+
+  .faq__arrow path {
+    fill: $color-white;
+    stroke: $color-white;
+  }
+
+  .faq__answer p {
+    color: rgba($color-white, 0.7);
+  }
+}

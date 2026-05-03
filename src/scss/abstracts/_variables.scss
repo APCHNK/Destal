@@ -18,6 +18,10 @@ $color-divider-on-dark: rgba(255, 255, 255, 0.12);
 $color-light: #f5f5f5;           // legacy alias for partials referencing $color-light
 $color-white: #ffffff;
 
+// Internal page (non-front) dark gradient — per Figma 5G Golden Copy node 793:810
+$color-page-grad-bottom: #121e1f;
+$color-page-grad-top:    #041a1d;
+
 // Breakpoints (min width)
 $mobile: 460px;
 $tablet: 768px;

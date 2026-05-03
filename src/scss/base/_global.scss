@@ -6,6 +6,37 @@ h1, h2, h3, h4, h5, h6 {
     background: $color-bg;
 }
 
+// Internal pages (non-front): dark teal gradient per Figma node 793:810.
+// Front-page renders <main> with its own banner-bg / light-bg sections, no .page-spacing.
+body:has(.page-spacing),
+.app-wrapper:has(.page-spacing) {
+    background: linear-gradient(
+        to top,
+        $color-page-grad-bottom 54.67%,
+        $color-page-grad-top 100%
+    );
+    color: $color-white;
+}
+
+// On internal pages, drop the light surface from any section wrapper that sits
+// between the page content and the footer (ACF section blocks + the contact
+// strip injected by footer.php). The page gradient then shows through them as
+// a single continuous background. footer.light-bg keeps its pink strip via
+// the more specific `footer.light-bg` rule below.
+.app-wrapper:has(.page-spacing) {
+    > div.light-bg,
+    > div.white-bg,
+    > div.dark-bg {
+        background: transparent;
+        color: $color-white;
+
+        h1, h2, h3, h4, h5, h6,
+        p, span, li {
+            color: $color-white;
+        }
+    }
+}
+
 main {
     background: $color-bg;
     display: flex;

@@ -11,6 +11,16 @@
     flex-direction: row;
   }
 
+  // On internal pages the contact card sits on the dark page gradient and
+  // uses a translucent white surface (per Figma 5G Golden Copy node 797:1252).
+  .app-wrapper:has(.page-spacing) & {
+    background-color: rgba($color-white, 0.1);
+
+    .action {
+      background: transparent;
+    }
+  }
+
   > picture {
     display: contents;
   }

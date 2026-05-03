@@ -1,6 +1,6 @@
 .page {
-  background-color: $color-bg;
-  color: $color-text;
+  background-color: transparent;
+  color: $color-white;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -18,12 +18,14 @@
 
   h1, h2, h3, h4, h5, h6,
   p, span, li {
-    color: $color-text;
+    color: $color-white;
   }
 
+  // Figma title is Inclusive Sans Regular (weight 400), not the bolder
+  // 600 used elsewhere in the theme.
   h1 {
     font-family: $font-sans;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 32px;
     line-height: 1.1;
 
