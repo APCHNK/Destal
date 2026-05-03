@@ -1,4 +1,8 @@
-.page {
+// All `.page-spacing .page` selectors below — never bare `.page`, because
+// WordPress also adds a `page` class to <body> on every Page post (including
+// the home page when it uses a static front page), which would otherwise let
+// these rules bleed onto the front page and override section titles.
+.page-spacing .page {
   background-color: transparent;
   color: $color-white;
   display: flex;
