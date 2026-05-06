@@ -1956,7 +1956,7 @@ header.open-menu .toggle-menu .close-icon {
 }
 .description-slider .swiper-slide {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
 }
 .description-slider .swiper-slide p {
