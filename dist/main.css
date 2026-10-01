@@ -2965,3 +2965,8 @@ html:not(.js) .reveal {
     margin-right: 8px;
   }
 }
+
+.banner {
+  height: 100vh;
+  height: 100svh;
+}
