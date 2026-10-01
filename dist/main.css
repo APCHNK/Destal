@@ -2937,3 +2937,9 @@ html:not(.js) .reveal {
   background: #e69a00;
   color: #000000;
 }
+
+@media (min-width: 1441px) {
+  .banner .banner-img img {
+    object-position: 50% 0;
+  }
+}
