@@ -317,3 +317,19 @@ add_filter('acf/format_value/name=footer_copyright', function ($value, $post_id,
 require_once get_template_directory() . '/inc/fix-translation-slugs.php';
 require_once get_template_directory() . '/inc/seo-front-translation.php';
 require_once get_template_directory() . '/inc/tour-dates-menu.php';
+require_once get_template_directory() . '/inc/site-seo.php';
+
+/** Site identity for inc/site-seo.php (schema graph, booking modal, Tour Dates page). */
+function satellite_site_config() {
+    return [
+        'brand'        => 'Yann Destal',
+        'thanks'       => ['Thank you for your interest in Yann Destal.', 'Спасибо за интерес к Янну Десталю.'],
+        'booking_slug' => 'contact',
+        'book_cta'     => ['Book Yann Destal', 'Заказать Янна Дестала'],
+        'main'         => 'yann-destal',
+        'nodes'        => [
+            'yann-destal' => ['type' => 'Person', 'name' => 'Yann Destal', 'page' => 'biography', 'job' => ['Singer, voice of Modjo', 'Певец, голос группы Modjo'], 'member_of' => ['modjo'], 'same_as_instagram' => true],
+            'modjo' => ['type' => 'MusicGroup', 'name' => 'Modjo', 'page' => 'about-modjo', 'members' => ['yann-destal']],
+        ],
+    ];
+}

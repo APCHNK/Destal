@@ -3014,3 +3014,5 @@ html:not(.js) .reveal {
   white-space: nowrap;
   width: 1px;
 }
+
+.modal-wrap .container .modal-title,.modal-wrap .container .success-message p{color:#14101f}
